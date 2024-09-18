@@ -20,5 +20,6 @@ describe("UserEntity unit tests", ()=>{
       expect(sut.props.name).toEqual(props.name);
       expect(sut.props.email).toEqual(props.email);
       expect(sut.props.password).toEqual(props.password);
+      expect(sut.props.createdAt).toBeInstanceOf(Date);
   });
 });
