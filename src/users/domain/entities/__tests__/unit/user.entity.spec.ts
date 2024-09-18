@@ -22,4 +22,29 @@ describe("UserEntity unit tests", ()=>{
       expect(sut.props.password).toEqual(props.password);
       expect(sut.props.createdAt).toBeInstanceOf(Date);
   });
+
+  it("Getter of name field", ()=>{
+    expect(sut.getEmail()).toBeDefined();
+    expect(sut.getEmail()).toEqual(props.email);
+    expect(typeof sut.getEmail()).toBe("string");
+  });
+
+  it("Getter of email field", ()=>{
+    expect(sut.getName()).toBeDefined();
+    expect(sut.getName()).toEqual(props.name);
+    expect(typeof sut.getName()).toBe("string");
+  });
+
+  it("Getter of password field", ()=>{
+    expect(sut.getPassword()).toBeDefined();
+    expect(sut.getPassword()).toEqual(props.password);
+    expect(typeof sut.getPassword()).toBe("string");
+  });
+
+  it("Getter of createdAt field", ()=>{
+    expect(sut.getCreatedAt()).toBeDefined();
+    expect(sut.getCreatedAt()).toEqual(props.createdAt);
+    expect(typeof sut.getCreatedAt()).toBe("object");
+    expect(sut.getCreatedAt()).toBeInstanceOf(Date);
+  });
 });
